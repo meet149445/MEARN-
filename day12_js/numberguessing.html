@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberGuessing</title>
+</head>
+<body>
+    <!-- <h1>Welcome to the number guessing game</h1>
+    <p>Write a number between 1 to 100!</p>
+    <input type="number" id="number" placeholder="Enter your number">
+    <button id="Guess">Guess</button>
+    <p id="result"></p>
+    <p id="attempt"></p> -->
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #000000, #25444c);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .game-container {
+            background: rgba(234, 221, 221, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            padding: 40px 30px;
+            text-align: center;
+            min-width: 320px;
+            animation: popIn 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.7) rotate(-10deg); opacity: 0; }
+            80% { transform: scale(1.05) rotate(2deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0); }
+        }
+        h1 {
+            color: #161e20;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-size: 2rem;
+            animation: fadeInDown 1s;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #b2dfdb;
+            width: 70%;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: box-shadow 0.2s;
+            outline: none;
+        }
+        input[type="number"]:focus {
+            box-shadow: 0 0 8px #2193b0;
+            border-color: #2193b0;
+        }
+        button#Guess {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #43cea2, #185a9d);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            box-shadow: 0 4px 14px rgba(67,206,162,0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        button#Guess:hover {
+            background: linear-gradient(90deg, #185a9d, #43cea2);
+            transform: scale(1.07);
+        }
+        #result {
+            margin-top: 18px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            min-height: 32px;
+            color: #ff5722;
+            animation: fadeIn 0.7s;
+        }
+        #attempt {
+            margin-top: 8px;
+            color: #388e3c;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    </style>
+    <div class="game-container">
+        <h1>Welcome to the number guessing game</h1>
+        <p>Write a number between 1 to 100!</p>
+        <input type="number" id="number" placeholder="Enter your number">
+        <button id="Guess">Guess</button>
+        <p id="result"></p>
+        <p id="attempt"></p>
+    </div>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        document.getElementById('Guess').addEventListener('click', function() {
+            let userGuess = parseInt(document.getElementById('number').value);
+            attempts++;
+
+            const result = document.getElementById('result');
+            const attempt = document.getElementById('attempt');
+
+            result.style.animation = 'none';
+            result.offsetHeight; // trigger reflow
+            result.style.animation = null;
+
+            if (userGuess === randomNumber) {
+                result.textContent = '🎉 Congratulations! You guessed the number!';
+                result.style.color = '#43cea2';
+                attempt.textContent = `Attempts: ${attempts}`;
+                attempt.style.color = '#388e3c';
+                // Confetti animation
+                confettiBurst();
+            } else if (userGuess < randomNumber) {
+                result.textContent = '❌ Galat, es se bada haii';
+                result.style.color = '#ff5722';
+            } else {
+                result.textContent = '❌ Galat, es se chhota haii';
+                result.style.color = '#ff5722';
+            }
+        });
+
+        // Simple confetti burst animation
+        function confettiBurst() {
+            for (let i = 0; i < 30; i++) {
+                let conf = document.createElement('div');
+                conf.className = 'confetti';
+                conf.style.left = (50 + Math.random() * 40 - 20) + '%';
+                conf.style.background = `hsl(${Math.random()*360},80%,60%)`;
+                conf.style.animationDelay = (Math.random() * 0.3) + 's';
+                document.body.appendChild(conf);
+                setTimeout(() => conf.remove(), 1200);
+            }
+        }
+    </script>
+    <style>
+        .confetti {
+            position: fixed;
+            top: 50%;
+            width: 10px;
+            height: 18px;
+            border-radius: 3px;
+            opacity: 0.8;
+            z-index: 9999;
+            animation: confetti-fall 1.2s cubic-bezier(.62,.01,.36,1.01) forwards;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(0) rotate(0deg) scale(1);}
+            80% { opacity: 1;}
+            100% { 
+                transform: translateY(300px) rotate(360deg) scale(0.7);
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+</html>

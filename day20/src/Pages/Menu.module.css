@@ -1,0 +1,99 @@
+.menuPage {
+  min-height: 100vh;
+  background: #fff7ed;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  padding: 2.5rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  color: #9a3412;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #4b5563;
+}
+
+.menuGrid {
+  padding: 1rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(154, 52, 18, 0.08);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.category {
+  background: #ffedd5;
+  color: #9a3412;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.card h3 {
+  font-size: 1.02rem;
+  min-height: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardBottom strong {
+  color: #c2410c;
+}
+
+.cardBottom button {
+  border: none;
+  background: #ea580c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .menuGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem 2rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem 1rem;
+  }
+}

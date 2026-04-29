@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p class="para">Heyy this is para</p>
+        <button class="butoon">Click</button>
+
+        <script>
+            let para = document.querySelector('.para');
+            para.addEventListener('click', function()
+        {
+            alert('paragraph is clicked')
+        })
+
+        let button = document.querySelector(".butoon");
+        button.addEventListener('click',function()
+    {
+        alert('clicked??')
+    })
+
+    window.addEventListener('load',function()
+{
+    alert('page load succesfully')
+})
+        </script>
+    </body>
+    </html>

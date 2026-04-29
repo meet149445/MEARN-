@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p id="para">Hey I am Para</p>
+        <h3 id="learn">Lets leran</h3>
+    </div>
+    <button onclick="color()">Change me</button>
+    <script>
+        let para = document.getElementById("para");
+        let learn = document.getElementById("learn");
+
+        function color(){
+            para.style=("color:red");
+            learn.style=("color:blue");
+        }
+    </script>
+</body>
+</html>

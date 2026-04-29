@@ -1,0 +1,83 @@
+.authPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff4f5a 0%, #ff7a59 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  width: min(100%, 430px);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card h1 {
+  margin-bottom: 0.45rem;
+  color: #1f2937;
+}
+
+.card p {
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+.form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.form label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.form input {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.form button {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: #ef4f5f;
+  cursor: pointer;
+}
+
+.footerText {
+  margin-top: 0.9rem;
+  text-align: center;
+  color: #4b5563;
+}
+
+.footerText a {
+  color: #ef4f5f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.message {
+  margin-top: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.success {
+  color: #166534;
+}

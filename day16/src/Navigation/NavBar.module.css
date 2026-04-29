@@ -1,0 +1,26 @@
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: aliceblue;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item{
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.item:hover{
+    background-color:rgb(0, 0, 0);
+    color: white;
+}

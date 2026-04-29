@@ -1,0 +1,26 @@
+input{
+    margin: 10px;
+    padding-left: 10px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+}
+
+button{
+    margin: 10px;
+    padding-left: 10px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    width: 280px;
+    height: 35px;
+}
+
+select{
+    margin: 10px;
+    padding-left: 10px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    width: 220px;
+    height: 35px;
+}

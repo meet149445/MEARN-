@@ -1,0 +1,52 @@
+.contactPage {
+  min-height: 100vh;
+  background: #fff7ed;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2.5rem;
+  text-align: center;
+}
+
+.wrapper h1 {
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  color: #9a3412;
+  margin-bottom: 0.6rem;
+}
+
+.wrapper p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.form input,
+.form textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.form button {
+  border: none;
+  background: #ea580c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}

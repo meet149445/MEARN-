@@ -1,0 +1,8 @@
+.customer{
+    display: flex;
+    background-color: rgb(227, 177, 177);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    margin-top: 10px ;
+    justify-content: center;
+}

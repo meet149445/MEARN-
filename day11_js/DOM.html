@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="para">hey there</p>
+    <button onclick="changeContent()">Change</button>
+    <button onclick="upper()">Upper Case</button>
+    <button onclick="lower()">Lower Case</button>
+
+    <script>
+        let para = document.getElementById("para");
+        // para.innerHTML="<p>Hey i am changed!!</p>"
+        function changeContent(){
+                para.innerHTML="<p>Hey i am changed!!</p>"
+        }
+
+        function upper(){
+            para.innerText=para.innerText.toUpperCase();
+        }
+        function lower(){
+            para.innerText=para.innerText.toLowerCase();
+        }
+    </script>
+</body>
+</html>
